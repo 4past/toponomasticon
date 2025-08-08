@@ -1,0 +1,319 @@
+{
+  "inputs": {
+    "https://esm.sh/preact@10.27.0/denonext/preact.mjs": {
+      "bytes": 11591,
+      "imports": [],
+      "format": "esm"
+    },
+    "https://esm.sh/preact@10.27.0": {
+      "bytes": 83,
+      "imports": [
+        {
+          "path": "https://esm.sh/preact@10.27.0/denonext/preact.mjs",
+          "kind": "import-statement",
+          "original": "/preact@10.27.0/denonext/preact.mjs"
+        }
+      ],
+      "format": "esm"
+    },
+    "https://esm.sh/preact@10.27.0/denonext/hooks.mjs": {
+      "bytes": 3789,
+      "imports": [
+        {
+          "path": "https://esm.sh/preact@10.27.0/denonext/preact.mjs",
+          "kind": "import-statement",
+          "original": "./preact.mjs"
+        }
+      ],
+      "format": "esm"
+    },
+    "https://esm.sh/preact@10.27.0/hooks": {
+      "bytes": 134,
+      "imports": [
+        {
+          "path": "https://esm.sh/preact@10.27.0/denonext/preact.mjs",
+          "kind": "import-statement",
+          "original": "/preact@10.27.0/denonext/preact.mjs"
+        },
+        {
+          "path": "https://esm.sh/preact@10.27.0/denonext/hooks.mjs",
+          "kind": "import-statement",
+          "original": "/preact@10.27.0/denonext/hooks.mjs"
+        }
+      ],
+      "format": "esm"
+    },
+    "https://esm.sh/maplibre-gl@5.6.2/denonext/maplibre-gl.mjs": {
+      "bytes": 931983,
+      "imports": [],
+      "format": "esm"
+    },
+    "https://esm.sh/maplibre-gl@5.6.2": {
+      "bytes": 165,
+      "imports": [
+        {
+          "path": "https://esm.sh/maplibre-gl@5.6.2/denonext/maplibre-gl.mjs",
+          "kind": "import-statement",
+          "original": "/maplibre-gl@5.6.2/denonext/maplibre-gl.mjs"
+        },
+        {
+          "path": "https://esm.sh/maplibre-gl@5.6.2/denonext/maplibre-gl.mjs",
+          "kind": "import-statement",
+          "original": "/maplibre-gl@5.6.2/denonext/maplibre-gl.mjs"
+        }
+      ],
+      "format": "esm"
+    },
+    "../../../../../../../../ARCH_CODE_DENO/GITHUB/4past/toponomasticon/imports/map-libre-gl.reexport.ts": {
+      "bytes": 16347,
+      "imports": [
+        {
+          "path": "https://esm.sh/maplibre-gl@5.6.2",
+          "kind": "import-statement",
+          "original": "https://esm.sh/maplibre-gl@5.6.2"
+        },
+        {
+          "path": "https://esm.sh/maplibre-gl@5.6.2",
+          "kind": "import-statement",
+          "original": "https://esm.sh/maplibre-gl@5.6.2"
+        }
+      ],
+      "format": "esm"
+    },
+    "../../../../../../../../ARCH_CODE_DENO/GITHUB/4past/toponomasticon/app/dev/shared/ui/map/_KEY.ts": {
+      "bytes": 65,
+      "imports": [],
+      "format": "esm"
+    },
+    "../../../../../../../../ARCH_CODE_DENO/GITHUB/4past/toponomasticon/app/dev/shared/ui/map/MapTerrain.data.ts": {
+      "bytes": 976,
+      "imports": [
+        {
+          "path": "../../../../../../../../ARCH_CODE_DENO/GITHUB/4past/toponomasticon/app/dev/shared/ui/map/_KEY.ts",
+          "kind": "import-statement",
+          "original": "./_KEY.ts"
+        }
+      ],
+      "format": "esm"
+    },
+    "https://esm.sh/preact@10.27.0/denonext/jsx-runtime.mjs": {
+      "bytes": 1893,
+      "imports": [
+        {
+          "path": "https://esm.sh/preact@10.27.0/denonext/preact.mjs",
+          "kind": "import-statement",
+          "original": "./preact.mjs"
+        },
+        {
+          "path": "https://esm.sh/preact@10.27.0/denonext/preact.mjs",
+          "kind": "import-statement",
+          "original": "./preact.mjs"
+        }
+      ],
+      "format": "esm"
+    },
+    "https://esm.sh/preact@10.27.0/jsx-runtime": {
+      "bytes": 146,
+      "imports": [
+        {
+          "path": "https://esm.sh/preact@10.27.0/denonext/preact.mjs",
+          "kind": "import-statement",
+          "original": "/preact@10.27.0/denonext/preact.mjs"
+        },
+        {
+          "path": "https://esm.sh/preact@10.27.0/denonext/jsx-runtime.mjs",
+          "kind": "import-statement",
+          "original": "/preact@10.27.0/denonext/jsx-runtime.mjs"
+        }
+      ],
+      "format": "esm"
+    },
+    "../../../../../../../../ARCH_CODE_DENO/GITHUB/4past/toponomasticon/app/dev/shared/ui/map/MapCanvas.tsx": {
+      "bytes": 8403,
+      "imports": [
+        {
+          "path": "https://esm.sh/preact@10.27.0/hooks",
+          "kind": "import-statement",
+          "original": "$tsx-preact/hooks"
+        },
+        {
+          "path": "https://esm.sh/preact@10.27.0",
+          "kind": "import-statement",
+          "original": "$tsx-preact"
+        },
+        {
+          "path": "../../../../../../../../ARCH_CODE_DENO/GITHUB/4past/toponomasticon/imports/map-libre-gl.reexport.ts",
+          "kind": "import-statement",
+          "original": "$map-libre-gl$"
+        },
+        {
+          "path": "./MapCanvas.def.ts",
+          "kind": "import-statement",
+          "external": true
+        },
+        {
+          "path": "../../../../../../../../ARCH_CODE_DENO/GITHUB/4past/toponomasticon/app/dev/shared/ui/map/MapTerrain.data.ts",
+          "kind": "import-statement",
+          "original": "./MapTerrain.data.ts"
+        },
+        {
+          "path": "https://esm.sh/preact@10.27.0/jsx-runtime",
+          "kind": "import-statement",
+          "original": "$tsx-preact/jsx-runtime"
+        }
+      ],
+      "format": "esm"
+    },
+    "../../../../../../../../ARCH_CODE_DENO/GITHUB/4past/toponomasticon/app/dev/shared/ui/map/StyleSwitcher.tsx": {
+      "bytes": 1031,
+      "imports": [
+        {
+          "path": "https://esm.sh/preact@10.27.0/jsx-runtime",
+          "kind": "import-statement",
+          "original": "$tsx-preact/jsx-runtime"
+        }
+      ],
+      "format": "esm"
+    },
+    "app/dev/shared/ui/map/_KEY.ts": {
+      "bytes": 65,
+      "imports": [],
+      "format": "esm"
+    },
+    "app/dev/shared/ui/map/MapStyles.data.ts": {
+      "bytes": 5738,
+      "imports": [
+        {
+          "path": "app/dev/shared/ui/map/_KEY.ts",
+          "kind": "import-statement",
+          "original": "./_KEY.ts"
+        }
+      ],
+      "format": "esm"
+    },
+    "app/dev/pages/Index.tsx": {
+      "bytes": 3963,
+      "imports": [
+        {
+          "path": "https://esm.sh/preact@10.27.0/hooks",
+          "kind": "import-statement",
+          "original": "$tsx-preact/hooks"
+        },
+        {
+          "path": "$tsx-preact",
+          "kind": "import-statement",
+          "external": true
+        },
+        {
+          "path": "../../../../../../../../ARCH_CODE_DENO/GITHUB/4past/toponomasticon/app/dev/shared/ui/map/MapCanvas.tsx",
+          "kind": "import-statement",
+          "original": "$$app-ui/map/MapCanvas.tsx"
+        },
+        {
+          "path": "../../../../../../../../ARCH_CODE_DENO/GITHUB/4past/toponomasticon/app/dev/shared/ui/map/StyleSwitcher.tsx",
+          "kind": "import-statement",
+          "original": "$$app-ui/map/StyleSwitcher.tsx"
+        },
+        {
+          "path": "app/dev/shared/ui/map/MapStyles.data.ts",
+          "kind": "import-statement",
+          "original": "../shared/ui/map/MapStyles.data.ts"
+        },
+        {
+          "path": "https://esm.sh/preact@10.27.0/jsx-runtime",
+          "kind": "import-statement",
+          "original": "$tsx-preact/jsx-runtime"
+        }
+      ],
+      "format": "esm"
+    },
+    "app/dev/main.tsx": {
+      "bytes": 550,
+      "imports": [
+        {
+          "path": "https://esm.sh/preact@10.27.0",
+          "kind": "import-statement",
+          "original": "$tsx-preact"
+        },
+        {
+          "path": "app/dev/pages/Index.tsx",
+          "kind": "import-statement",
+          "original": "./pages/Index.tsx"
+        },
+        {
+          "path": "https://esm.sh/preact@10.27.0/jsx-runtime",
+          "kind": "import-statement",
+          "original": "$tsx-preact/jsx-runtime"
+        }
+      ],
+      "format": "esm"
+    }
+  },
+  "outputs": {
+    "app/out/gen/main.mjs.map": {
+      "imports": [],
+      "exports": [],
+      "inputs": {},
+      "bytes": 2040516
+    },
+    "app/out/gen/main.mjs": {
+      "imports": [],
+      "exports": [],
+      "entryPoint": "app/dev/main.tsx",
+      "inputs": {
+        "https://esm.sh/preact@10.27.0/denonext/preact.mjs": {
+          "bytesInOutput": 11711
+        },
+        "https://esm.sh/preact@10.27.0": {
+          "bytesInOutput": 0
+        },
+        "https://esm.sh/preact@10.27.0/denonext/hooks.mjs": {
+          "bytesInOutput": 2828
+        },
+        "https://esm.sh/preact@10.27.0/hooks": {
+          "bytesInOutput": 0
+        },
+        "https://esm.sh/maplibre-gl@5.6.2/denonext/maplibre-gl.mjs": {
+          "bytesInOutput": 930919
+        },
+        "https://esm.sh/maplibre-gl@5.6.2": {
+          "bytesInOutput": 0
+        },
+        "../../../../../../../../ARCH_CODE_DENO/GITHUB/4past/toponomasticon/imports/map-libre-gl.reexport.ts": {
+          "bytesInOutput": 0
+        },
+        "../../../../../../../../ARCH_CODE_DENO/GITHUB/4past/toponomasticon/app/dev/shared/ui/map/_KEY.ts": {
+          "bytesInOutput": 30
+        },
+        "../../../../../../../../ARCH_CODE_DENO/GITHUB/4past/toponomasticon/app/dev/shared/ui/map/MapTerrain.data.ts": {
+          "bytesInOutput": 315
+        },
+        "https://esm.sh/preact@10.27.0/denonext/jsx-runtime.mjs": {
+          "bytesInOutput": 393
+        },
+        "https://esm.sh/preact@10.27.0/jsx-runtime": {
+          "bytesInOutput": 0
+        },
+        "../../../../../../../../ARCH_CODE_DENO/GITHUB/4past/toponomasticon/app/dev/shared/ui/map/MapCanvas.tsx": {
+          "bytesInOutput": 2077
+        },
+        "../../../../../../../../ARCH_CODE_DENO/GITHUB/4past/toponomasticon/app/dev/shared/ui/map/StyleSwitcher.tsx": {
+          "bytesInOutput": 218
+        },
+        "app/dev/shared/ui/map/_KEY.ts": {
+          "bytesInOutput": 30
+        },
+        "app/dev/shared/ui/map/MapStyles.data.ts": {
+          "bytesInOutput": 3683
+        },
+        "app/dev/pages/Index.tsx": {
+          "bytesInOutput": 1153
+        },
+        "app/dev/main.tsx": {
+          "bytesInOutput": 278
+        }
+      },
+      "bytes": 953889
+    }
+  }
+}
