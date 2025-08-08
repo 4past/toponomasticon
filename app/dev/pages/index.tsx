@@ -93,12 +93,12 @@ export function PageIndex(): VNode {
             onStyleChange={setCurrentStyle}
           />
           {/* Prosty przycisk do testowania dynamicznego włączania/wyłączania terenu */}
-        {/* <button 
+        <button 
           style={{ position: 'absolute', top: '10px', left: '50px', zIndex: 10 }}
           onClick={() => setTerrainEnabled(!terrainEnabled)}
         >
           Teren: {terrainEnabled ? 'WŁ' : 'WYŁ'}
-        </button> */}
+        </button>
           {/* Miejsce na przyszłe komponenty, np. <Marker /> */}
         </MapCanvas>
       </div>

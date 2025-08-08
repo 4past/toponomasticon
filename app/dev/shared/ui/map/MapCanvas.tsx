@@ -3,9 +3,11 @@
 
 import { useEffect, useRef, useState } from "$tsx-preact/hooks";
 import { createContext, type ComponentChildren, type VNode } from "$tsx-preact";
+
 import { MapLibreCore, NavigationControl,TerrainControl } from "$map-libre-gl$";
 import { MapCanvasProps } from "./MapCanvas.def.ts";
 import { TERRAIN_SOURCE, HILLSHADE_LAYER } from "./MapTerrain.data.ts";
+import type { SourceSpecification, LayerSpecification } from "$map-libre-gl$";
 
 // Tworzymy i eksportujemy Kontekst.
 // Komponenty-dzieci (np. <Marker>, <Layer>) będą go używać,  aby uzyskać dostęp do instancji mapy.
@@ -29,7 +31,7 @@ export function MapCanvas({
   const navigationControlRef = useRef<NavigationControl | null>(null);
   const terrainControlRef = useRef<TerrainControl | null>(null);
 
-  // Ten useEffect uruchamia się TYLKO RAZ, aby stworzyć mapę.
+  // #01_useEffect: Inicjalizacja mapy (uruchamia się tylko raz)
   useEffect(() => {
     // Sprawdzamy, czy kontener istnieje i czy mapa nie została już zainicjowana.
     if (!mapContainerRef.current) return;
@@ -68,16 +70,67 @@ export function MapCanvas({
     //JSON.stringify(fetchData), 
     //JSON.stringify(otherOptions)
   ]);
-  // Ten useEffect nasłuchuje na zmiany STYLU i aktualizuje istniejącą mapę.
+  // #02_useEffect: Aktualizacja stylu z ZACHOWANIEM STANU
+  //useEffect(() => {
+  //  // Jeśli mapa jeszcze nie istnieje lub nowy styl jest taki sam jak obecny, nic nie rób.
+  //  if (!map || map.getStyle() === renderStyle) return;
+  //  map.setStyle(renderStyle);
+  //}, [renderStyle, map]); // Uruchom ponownie tylko, gdy zmieni się styl lub instancja mapy.
+
   useEffect(() => {
-    // Jeśli mapa jeszcze nie istnieje lub nowy styl jest taki sam jak obecny, nic nie rób.
-    if (!map || map.getStyle() === renderStyle) return;
+    if (!map) return;
 
+    // Zapisz aktualny stan kamery
+    const cameraState = {
+      center: map.getCenter(),
+      zoom: map.getZoom(),
+      pitch: map.getPitch(),
+      bearing: map.getBearing(),
+    };
+
+    // Zapisz niestandardowe źródła i warstwy
+    const style = map.getStyle();
+    const customSources = new Map<string, SourceSpecification>();
+    const customLayers: LayerSpecification[] = [];
+
+    if (style.sources) {
+      for (const sourceId in style.sources) {
+        if (sourceId === 'terrain-data') {
+          customSources.set(sourceId, style.sources[sourceId]);
+        }
+      }
+    }
+    if (style.layers) {
+      for (const layer of style.layers) {
+        if (layer.id === 'hillshade') {
+          customLayers.push(layer);
+        }
+      }
+    }
+
+    // Funkcja, która przywróci stan po załadowaniu nowego stylu
+    const restoreMapState = () => {
+      for (const [id, source] of customSources) {
+        if (!map.getSource(id)) map.addSource(id, source);
+      }
+      for (const layer of customLayers) {
+        if (!map.getLayer(layer.id)) map.addLayer(layer);
+      }
+      if (renderSettings?.showTerrain) {
+        map.setTerrain({ source: 'terrain-data', exaggeration: renderSettings.exaggeration ?? 1 });
+      }
+    };
+
+    map.once('styledata', restoreMapState);
     map.setStyle(renderStyle);
+    map.jumpTo(cameraState);
 
-  }, [renderStyle, map]); // Uruchom ponownie tylko, gdy zmieni się styl lub instancja mapy.
+    return () => {
+      map.off('styledata', restoreMapState);
+    };
+  }, [renderStyle]); // Ten hook reaguje już tylko na zmianę stylu
 
-  // useEffect do zarządzania kontrolkami nawigacji
+  // #03_useEffect: Zarządzanie kontrolkami nawigacji
   useEffect(() => {
     if (!map) return; // Uruchom tylko, gdy mapa jest gotowa
 
@@ -99,7 +152,7 @@ export function MapCanvas({
     }
   }, [map, controlViewMap?.showNavigation]); // Uruchom ponownie, gdy zmieni się mapa lub opcja 'showNavigation'
 
-  // useEffect do zarządzania terenem 3D
+  // #04_useEffect: Zarządzanie terenem 3D (włączanie/wyłączanie)
   useEffect(() => {
     if (!map) return; // Uruchom tylko, gdy mapa jest gotowa
 
@@ -133,7 +186,7 @@ export function MapCanvas({
 
   }, [map, renderSettings?.showTerrain, renderSettings?.exaggeration]); // Uruchom ponownie, gdy zmieni się mapa lub opcja 'showTerrain'
 
-  // useEffect do zarządzania KONTROLKĄ terenu
+  // #05_useEffect: Zarządzanie KONTROLKĄ terenu
   useEffect(() => {
     if (!map) return;
 

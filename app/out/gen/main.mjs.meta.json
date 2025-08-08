@@ -129,7 +129,7 @@
       "format": "esm"
     },
     "../../../../../../../../ARCH_CODE_DENO/GITHUB/4past/toponomasticon/app/dev/shared/ui/map/MapCanvas.tsx": {
-      "bytes": 6717,
+      "bytes": 8403,
       "imports": [
         {
           "path": "https://esm.sh/preact@10.27.0/hooks",
@@ -192,7 +192,7 @@
       "format": "esm"
     },
     "app/dev/pages/Index.tsx": {
-      "bytes": 3971,
+      "bytes": 3963,
       "imports": [
         {
           "path": "https://esm.sh/preact@10.27.0/hooks",
@@ -254,7 +254,7 @@
       "imports": [],
       "exports": [],
       "inputs": {},
-      "bytes": 2037763
+      "bytes": 2040516
     },
     "app/out/gen/main.mjs": {
       "imports": [],
@@ -295,7 +295,7 @@
           "bytesInOutput": 0
         },
         "../../../../../../../../ARCH_CODE_DENO/GITHUB/4past/toponomasticon/app/dev/shared/ui/map/MapCanvas.tsx": {
-          "bytesInOutput": 1521
+          "bytesInOutput": 2077
         },
         "../../../../../../../../ARCH_CODE_DENO/GITHUB/4past/toponomasticon/app/dev/shared/ui/map/StyleSwitcher.tsx": {
           "bytesInOutput": 218
@@ -307,13 +307,13 @@
           "bytesInOutput": 3683
         },
         "app/dev/pages/Index.tsx": {
-          "bytesInOutput": 1012
+          "bytesInOutput": 1153
         },
         "app/dev/main.tsx": {
           "bytesInOutput": 278
         }
       },
-      "bytes": 953192
+      "bytes": 953889
     }
   }
 }

@@ -56,16 +56,16 @@ const STYLE_MIERUNE: {[_:string]:StyleSpecification} = {
 // Definiujemy listę dostępnych stylów, które nasz przełącznik będzie wyświetlał.
 export const AVAILABLE_STYLES: MapLibreStyle[] = [  
   {
-    name: "Terrain [Stamen]",
-    url: `https://tiles.stadiamaps.com/styles/stamen_terrain.json`
-  },
-  {
     name: "Toner Lite [Stamen]",
     url: `https://tiles.stadiamaps.com/styles/stamen_toner_lite.json`
   },
   {
     name: "Toner [Stamen]",
     url: `https://tiles.stadiamaps.com/styles/stamen_toner.json`
+  },
+  {
+    name: "Terrain [Stamen]",
+    url: `https://tiles.stadiamaps.com/styles/stamen_terrain.json`
   },
   {
     name: "Watercolor [Stamen]",
