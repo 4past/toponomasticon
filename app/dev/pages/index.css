@@ -1,3 +1,5 @@
+@import "../shared/ui/map/MapCanvas.css";
+@import "../shared/ui/map/StyleSwitcher.css";
 
 .pp {
   background-color: chartreuse;

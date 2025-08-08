@@ -1,0 +1,70 @@
+{
+  "inputs": {
+    "app/dev/shared/ui/map/MapCanvas.css": {
+      "bytes": 410,
+      "imports": [
+        {
+          "path": "https://esm.sh/maplibre-gl@5.6.1/dist/maplibre-gl.css",
+          "kind": "import-rule",
+          "external": true
+        }
+      ]
+    },
+    "app/dev/shared/ui/map/StyleSwitcher.css": {
+      "bytes": 733,
+      "imports": []
+    },
+    "app/dev/pages/Index.css": {
+      "bytes": 129,
+      "imports": [
+        {
+          "path": "app/dev/shared/ui/map/MapCanvas.css",
+          "kind": "import-rule",
+          "original": "../shared/ui/map/MapCanvas.css"
+        },
+        {
+          "path": "app/dev/shared/ui/map/StyleSwitcher.css",
+          "kind": "import-rule",
+          "original": "../shared/ui/map/StyleSwitcher.css"
+        }
+      ]
+    },
+    "app/dev/main.css": {
+      "bytes": 30,
+      "imports": [
+        {
+          "path": "app/dev/pages/Index.css",
+          "kind": "import-rule",
+          "original": "./pages/Index.css"
+        }
+      ]
+    }
+  },
+  "outputs": {
+    "app/out/gen/main.css": {
+      "imports": [
+        {
+          "path": "https://esm.sh/maplibre-gl@5.6.1/dist/maplibre-gl.css",
+          "kind": "import-rule",
+          "external": true
+        }
+      ],
+      "entryPoint": "app/dev/main.css",
+      "inputs": {
+        "app/dev/shared/ui/map/MapCanvas.css": {
+          "bytesInOutput": 79
+        },
+        "app/dev/shared/ui/map/StyleSwitcher.css": {
+          "bytesInOutput": 417
+        },
+        "app/dev/pages/Index.css": {
+          "bytesInOutput": 29
+        },
+        "app/dev/main.css": {
+          "bytesInOutput": 0
+        }
+      },
+      "bytes": 589
+    }
+  }
+}

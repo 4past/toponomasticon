@@ -1,0 +1,32 @@
+.style-switcher {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: rgba(255, 255, 255, 0.8);
+  padding: 5px;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  z-index: 10; /* Upewnij się, że jest nad mapą */
+  max-height: 250px; /* Ogranicz maksymalną wysokość kontenera */
+  overflow-y: auto;  /* Pokaż pionowy pasek przewijania, gdy zawartość się nie mieści */
+}
+
+.style-switcher button {
+  background: #fff;
+  border: 1px solid #ccc;
+  padding: 5px 10px;
+  cursor: pointer;
+  width: 100%;
+  text-align: left;
+  flex-shrink: 0; 
+}
+
+.style-switcher button:hover {
+  background: #f0f0f0;
+}
+
+.style-switcher button.active {
+  filter: invert(1);
+}
