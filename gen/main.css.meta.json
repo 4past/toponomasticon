@@ -1,31 +1,68 @@
 {
   "inputs": {
-    "app/dev/shared/ui/map/MapCanvas.css": {
-      "bytes": 410,
+    "app/dev/shared/ui/map/core/MapCanvas.css": {
+      "bytes": 518,
       "imports": [
         {
-          "path": "https://esm.sh/maplibre-gl@5.6.1/dist/maplibre-gl.css",
+          "path": "https://esm.sh/maplibre-gl@5.6.2/dist/maplibre-gl.css",
           "kind": "import-rule",
           "external": true
         }
       ]
     },
-    "app/dev/shared/ui/map/StyleSwitcher.css": {
-      "bytes": 733,
+    "app/dev/shared/ui/map/controls/CameraFrame.css": {
+      "bytes": 1182,
       "imports": []
     },
-    "app/dev/pages/Index.css": {
-      "bytes": 129,
+    "app/dev/shared/ui/map/controls/MapControls.css": {
+      "bytes": 2704,
+      "imports": []
+    },
+    "app/dev/shared/ui/map/controls/BaseLayers.css": {
+      "bytes": 1945,
+      "imports": []
+    },
+    "app/dev/shared/ui/map/controls/PanelOverCanvas.css": {
+      "bytes": 2132,
+      "imports": []
+    },
+    "app/dev/shared/ui/map/mod.css": {
+      "bytes": 277,
       "imports": [
         {
-          "path": "app/dev/shared/ui/map/MapCanvas.css",
+          "path": "app/dev/shared/ui/map/core/MapCanvas.css",
           "kind": "import-rule",
-          "original": "../shared/ui/map/MapCanvas.css"
+          "original": "./core/MapCanvas.css"
         },
         {
-          "path": "app/dev/shared/ui/map/StyleSwitcher.css",
+          "path": "app/dev/shared/ui/map/controls/CameraFrame.css",
           "kind": "import-rule",
-          "original": "../shared/ui/map/StyleSwitcher.css"
+          "original": "./controls/CameraFrame.css"
+        },
+        {
+          "path": "app/dev/shared/ui/map/controls/MapControls.css",
+          "kind": "import-rule",
+          "original": "./controls/MapControls.css"
+        },
+        {
+          "path": "app/dev/shared/ui/map/controls/BaseLayers.css",
+          "kind": "import-rule",
+          "original": "./controls/BaseLayers.css"
+        },
+        {
+          "path": "app/dev/shared/ui/map/controls/PanelOverCanvas.css",
+          "kind": "import-rule",
+          "original": "./controls/PanelOverCanvas.css"
+        }
+      ]
+    },
+    "app/dev/pages/Index.css": {
+      "bytes": 1186,
+      "imports": [
+        {
+          "path": "app/dev/shared/ui/map/mod.css",
+          "kind": "import-rule",
+          "original": "../shared/ui/map/mod.css"
         }
       ]
     },
@@ -44,27 +81,39 @@
     "app/out/gen/main.css": {
       "imports": [
         {
-          "path": "https://esm.sh/maplibre-gl@5.6.1/dist/maplibre-gl.css",
+          "path": "https://esm.sh/maplibre-gl@5.6.2/dist/maplibre-gl.css",
           "kind": "import-rule",
           "external": true
         }
       ],
       "entryPoint": "app/dev/main.css",
       "inputs": {
-        "app/dev/shared/ui/map/MapCanvas.css": {
+        "app/dev/shared/ui/map/core/MapCanvas.css": {
           "bytesInOutput": 79
         },
-        "app/dev/shared/ui/map/StyleSwitcher.css": {
-          "bytesInOutput": 417
+        "app/dev/shared/ui/map/controls/CameraFrame.css": {
+          "bytesInOutput": 742
+        },
+        "app/dev/shared/ui/map/controls/MapControls.css": {
+          "bytesInOutput": 1602
+        },
+        "app/dev/shared/ui/map/controls/BaseLayers.css": {
+          "bytesInOutput": 1299
+        },
+        "app/dev/shared/ui/map/controls/PanelOverCanvas.css": {
+          "bytesInOutput": 1572
+        },
+        "app/dev/shared/ui/map/mod.css": {
+          "bytesInOutput": 0
         },
         "app/dev/pages/Index.css": {
-          "bytesInOutput": 29
+          "bytesInOutput": 612
         },
         "app/dev/main.css": {
           "bytesInOutput": 0
         }
       },
-      "bytes": 589
+      "bytes": 5970
     }
   }
 }
